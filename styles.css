@@ -1,6 +1,8 @@
 /* Defining Variable */
 :root{
     --navbar-height: 60px;
+    --search-bar-radius: 20px;
+    --search-bar-height: 90%;
 }
 
 
@@ -32,9 +34,9 @@ body{
     justify-content: space-between;
     background-color: #0f0f0f;
     height: var(--navbar-height);
-    border: 1px solid white;
+    /* border: 1px solid white; */
     color: white;
-    --start-end-width: 15%
+    --start-end-width: 20%
 }
 
 /* nav-start */
@@ -44,22 +46,40 @@ body{
     align-items: center;
     width: var(--start-end-width);
 }
+.nav-start .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 20px;
+    border-radius: 100%;
+}
+.nav-start .menu:hover{
+    background-color: #272727;
+}
 .menuicon{
     filter: invert(1);
-    height: 40%;
-    margin-left: 20px;
+    height: 50%;
+}
+.nav-logo{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
 }
 .yt-icon{
-    height: 60%;
-    margin-left: 30px;
-    margin-right: 3px;
+    height: 50%;
+    /* margin-left: 30px;
+    margin-right: 3px; */
 }
-.nav-start .head{
-    font-weight: bold;
+.nav-logo .head{
+    font-weight: 700;
     font-size: 1.4rem;
     font-family: 'Roboto Condensed', sans-serif;
 }
-.nav-start .head::after{
+.nav-logo .head::after{
     font-size: 0.7rem;
     font-weight: 100;
     color: rgb(173, 173, 173);
@@ -68,7 +88,102 @@ body{
 }
 
 /* nav-mid */
+.nav-mid{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-div-parent{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+}
+.sd-1{
+    height: var(--search-bar-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    border: #2a2a2a 1px solid;
+    border-top-left-radius: var(--search-bar-radius);
+    border-bottom-left-radius: var(--search-bar-radius);
+    width: 7%;
+    visibility: hidden;
+}
+.sd-1 .search-thin{
+    height: 45%;
+    filter: invert(1);
+}
+.sd-2{
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: none;
+    border: 1px solid #2a2a2a;
+    height: var(--search-bar-height);
+    width: 80%;
+    padding-left: 15px;
+    border-top-left-radius: var(--search-bar-radius);
+    border-bottom-left-radius: var(--search-bar-radius);
 
+}
+.sd-3{
+    height: var(--search-bar-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    border: #2a2a2a 1px solid;
+    border-top-right-radius: var(--search-bar-radius);
+    border-bottom-right-radius: var(--search-bar-radius);
+    width: 10%;
+}
+.sd-3 .search-thin{
+    height: 60%;
+    filter: invert(1);
+}
+/* on Focus classes for Search */
+.sd-1-onfocus{
+    visibility: visible;
+    border: 1px solid #163d6d;
+    border-right: none;
+}
+.sd-2-onfocus:focus-visible{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-right: none;
+    border: 1px solid #163d6d;
+    border-left: none;
+    outline: none;
+}
+
+/* mic icon  */
+.mic-div{
+    border-radius: 100%;
+    height: 2.2em;
+    width: 2.2em;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mic-div:hover{
+    background-color: #303030;
+}
+.mic{
+    height: 50%;
+    filter: invert(1);
+}
 
 /* nav-end */
 .nav-end{
@@ -78,13 +193,22 @@ body{
     align-items: center;
     width: var(--start-end-width);
 }
+.vdocam-div{
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15%;
+}
 .vdocam{
-    height: 40%;
+    height: 50%;
     filter: invert(1);
 }
 .dpcon{
     height: 55%;
-}
-.nav-end img{
     margin-right: 20%;
+}
+.nav-end .dpcon:hover{
+    cursor: pointer;
 }
