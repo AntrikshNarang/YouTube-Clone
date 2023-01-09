@@ -1,6 +1,6 @@
 /* Defining Variable */
 :root{
-    --navbar-height: 60px;
+    --navbar-height: 8vh;
     --search-bar-radius: 20px;
     --search-bar-height: 90%;
 }
@@ -68,6 +68,9 @@ body{
     justify-content: flex-start;
     align-items: center;
     margin-left: 10px;
+}
+.nav-logo:hover{
+    cursor: pointer;
 }
 .yt-icon{
     height: 50%;
@@ -212,3 +215,96 @@ body{
 .nav-end .dpcon:hover{
     cursor: pointer;
 }
+
+
+
+
+
+/* aside */
+.aside-main{
+    width: 15vw;
+    height: 92vh;
+    overflow-y: scroll;
+}
+.aside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.aside-sections{
+    width: 85%;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.aside-sections:nth-child(1){
+    background-color: #272727;
+}
+.aside-sections:nth-child(1):hover{
+    background-color: #3d3d3d !important;
+}
+.aside-img{
+    filter: invert(1);
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform:translateY(-50%)
+}
+.aside-sections p{
+    font-family: 'Roboto', sans-serif;
+    transform: translateX(3vw);
+    font-size: 0.9rem;
+}
+.aside-sections:hover{
+    background-color: #272727;
+}
+.aside hr{
+    width: 90%;
+    border: none;
+    border-top: 1px solid #2a2a2a;
+}
+.aside-lower{
+    padding-left: 15px;
+    width: 90%;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: 500;
+    color: #aaa;
+    opacity: 0.7;
+}
+.aside-copyright{
+    padding-left: 15px;
+    width: 90%;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: 100;
+    color: #aaa;
+    opacity: 0.5;
+}
+
+/* Scrollbar  */
+.aside-main::-webkit-scrollbar{
+    visibility: hidden;
+    width: 8px;
+}
+.aside-scrbar::-webkit-scrollbar{
+    background: none;
+}
+.aside-scrbar::-webkit-scrollbar-thumb{
+    background-color: #3d3d3d !important;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* Section */
